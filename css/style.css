@@ -6,6 +6,7 @@
 body{
     background-color: rgb(10, 9, 9);
     color: white;
+    overflow-x: hidden;
 }
 .nav_logo{
 width: 400px;
@@ -27,6 +28,15 @@ margin-left: -100px;
 }
 .nav_visible input{
     padding: 5px 10px;
+}
+.user-section{
+    display: flex;
+    align-items: center;
+}
+.user-section a i{
+    color: white;
+    font-size: 30px;
+    margin-left: -350px;
 }
 /* menu */
 .menu{
@@ -67,6 +77,18 @@ margin-left: -100px;
         border: none;
         color: white;
     }
-.menu.visible {
+.slider{
+    display: block;
+}
+.slide-a{
+    display: flex;
+    flex-direction: column;
+}
+.slider-img{
+    height: 400px;
+}
+@media (max-width:7000px) {
+    .menu.visible {
         display: block;
-      }
+}
+}
