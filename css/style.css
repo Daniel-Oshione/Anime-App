@@ -50,6 +50,8 @@ margin-left: -100px;
     margin-left: 958px;
     margin-top: -100px;
     transition: 500ms ease-in;
+    position: fixed;
+    z-index: 1;
     }
 .menu a{
     text-align: left;
@@ -76,9 +78,10 @@ margin-left: -100px;
         background: none;
         border: none;
         color: white;
+        z-index: 2;
     }
-.slider{
-    display: block;
+.menu.visible {
+        display: block;
 }
 .slide-a{
     display: flex;
@@ -86,9 +89,4 @@ margin-left: -100px;
 }
 .slider-img{
     height: 400px;
-}
-@media (max-width:7000px) {
-    .menu.visible {
-        display: block;
-}
 }
