@@ -40,7 +40,8 @@ margin-left: -100px;
 }
 /* menu */
 .menu{
-    background-color: rgb(30, 30, 30);
+    /* background-color: rgb(30, 30, 30); */
+    backdrop-filter: blur(50px);
     width: 25vw;
     display: none;
     overflow-y: scroll;
@@ -79,9 +80,13 @@ margin-left: -100px;
         border: none;
         color: white;
         z-index: 2;
+        cursor: pointer;
     }
 .menu.visible {
         display: block;
+}
+.slider{
+    margin-top: 50px;
 }
 .slide-a{
     display: flex;
@@ -89,4 +94,24 @@ margin-left: -100px;
 }
 .slider-img{
     height: 400px;
+    width: 300px;
+    object-fit: cover;
+}
+.slide-description{
+    display: flex;
+    justify-content: space-evenly;
+}
+.popular{
+    padding-left: 85px;
+    margin-bottom: 20px;
+}
+.genre{
+    display: flex;
+}
+.genre p{
+    margin: 5px 10px 5px 0;
+}
+.slider-text a{
+text-decoration: none;
+color: white;
 }
