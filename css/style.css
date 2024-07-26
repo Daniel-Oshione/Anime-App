@@ -43,12 +43,12 @@ margin-left: -100px;
     /* background-color: rgb(30, 30, 30); */
     backdrop-filter: blur(50px);
     width: 25vw;
-    display: none;
+    /* display: none; */
     overflow-y: scroll;
     scrollbar-width:none;
     height: 100vh;
     padding: 90px 0 20px 20px;
-    margin-left: 958px;
+    margin-left: 978px;
     margin-top: -100px;
     transition: 500ms ease-in;
     position: fixed;
@@ -83,14 +83,23 @@ margin-left: -100px;
         cursor: pointer;
     }
 .menu.visible {
-        display: block;
+        display: none;
 }
-.slider{
+.head-content{
     margin-top: 50px;
 }
-.slide-a{
+.slider{
     display: flex;
-    flex-direction: column;
+    overflow-x: scroll;
+    scrollbar-width:none;
+    scroll-snap-type: x mandatory ;
+}
+.slider > .slide-a{
+flex: 0 0 100%;
+scroll-snap-align: center;
+}
+.slide-a{
+    /* background-color: wheat; */
 }
 .slider-img{
     height: 400px;
@@ -100,6 +109,7 @@ margin-left: -100px;
 .slide-description{
     display: flex;
     justify-content: space-evenly;
+    width: 100vw;
 }
 .popular{
     padding-left: 85px;
@@ -110,6 +120,9 @@ margin-left: -100px;
 }
 .genre p{
     margin: 5px 10px 5px 0;
+}
+.anime-description{
+    margin-top: 50px;
 }
 .slider-text a{
 text-decoration: none;
