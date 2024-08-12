@@ -4,6 +4,5 @@ document.addEventListener('DOMContentLoaded', function() {
   
     toggleButton.addEventListener('click', function() {
       dropDown.classList.toggle('visible');
-      sliderContent.style.display = 'none';
     });
   });
