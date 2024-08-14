@@ -23,7 +23,7 @@ body{
     overflow-x: hidden;
     margin-left: -100px;
     }
-.nav i{
+nav i{
         color: white;
         cursor: pointer;
     }
@@ -33,10 +33,15 @@ body{
         justify-content: space-between;
         padding: 0 30px;
         overflow: hidden;
+        position: sticky;
+        top: 0;
     }
 .nav_visible input{
         padding: 5px 10px;
     }
+.nav_visible input:focus{
+    outline: none;
+}
 .navbar_toggle{
         display:block;
         font-size: 35px;
@@ -53,11 +58,10 @@ body{
 .user-section a i{
         color: white;
         font-size: 30px;
-        margin-left: -230px;
+         margin-right: 10px; 
     }
 .head-content{
         margin-top: 50px;
-        padding: 20px;
     }
 .slider{
         display: flex;
@@ -75,7 +79,6 @@ body{
             height: 250px;
             width: 300px;
             object-fit: cover;
-            box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
         }
 .slide-description{
             display: flex;
@@ -131,3 +134,181 @@ body{
     .drop_page{
             background-color: blue;
         }
+
+/* Below this line is the mobile responsivity code */
+
+@media (max-width:1260px){
+.slider-img{
+    height: 200px;
+    width: 250px;
+}
+}
+@media (max-width:1215px){
+.slider-img{
+    height: 190px;
+    width: 230px;
+}
+.anime-description{
+    font-size: 11px;
+}
+}
+@media (max-width:1040px){
+.slider-img{
+    height: 170px;
+    width: 210px;
+}
+.anime-description{
+    font-size: 10px;
+}
+}
+@media (max-width:948px){
+.anime-description br{
+        display: none;
+}
+.nav_logo{
+        width: 200px;
+        height: 80px;
+        margin-left: -50px;
+}
+.slider-img{
+    height: 150px;
+    width: 190px;
+}
+.anime-description{
+    font-size: 10px;
+}
+.slider-text a h1{
+    font-size: 20px;
+}
+.genre p{
+font-size: 12px;
+}
+}
+@media (max-width:856px){
+.menu ul li a p{
+        font-size: 15px;
+}
+.slider-img{
+    width: 160px;
+}
+}
+@media (max-width:855px){
+.slide-description{
+    flex-direction: column;
+}
+.slider-img{
+    width: 500px;
+    height: 230px;
+    margin-bottom: 10px;
+}
+.head-content{
+    margin-top: 10px;
+}
+.popular{
+    margin-bottom: -10px;
+    font-size: 20px;
+}
+}
+@media (max-width:734px){
+.nav_visible input{
+padding: 2px 8px;
+}
+.user-section a i{
+    font-size: 25px;
+}
+.navbar_toggle{
+    font-size: 25px;
+}
+.menu ul li a p{
+    font-size: 12px;
+}
+}
+@media (max-width:647px){
+.slider-img{
+        width: 430px;
+}
+.slider-text{
+    padding: 0 30px;
+}
+.anime-description{
+    font-size: 9px;
+}
+}
+@media (max-width:573px){
+.slider-img{
+    width: 380px;
+}
+.slider-text{
+    transform: scale(0.9);
+}
+.genre{
+    transform: scale(0.9);
+    margin-left: -20px;
+}
+.genre p{
+    font-size: 11px;
+}
+}
+@media (max-width:520px){
+.nav_logo{
+        width: 150px;
+}
+.nav_visible input{
+    padding: 2px 1px;
+}
+.slider-img{
+    width: 350px;
+}
+.menu{
+    width: 70vw;
+}
+.menu ul li a p{
+    font-size: 10px;
+}
+}
+@media (max-width:470px){
+.user-section a i{
+    font-size: 20px;
+}
+.navbar_toggle{
+    font-size: 20px;
+}
+.slider-img{
+        width: 300px;
+}
+.menu{
+    padding:90px 0 20px 9px ;
+}
+.popular{
+    padding-left: 50px;
+}
+}
+@media (max-width:404px){
+    .slider-img{
+        width: 250px;
+    }
+}
+@media (max-width:384px){
+.nav_logo{
+       margin-left: -20px;
+}
+.nav_visible input{
+    transform: scale(0.6);
+}
+}
+@media (max-width:358px){
+.nav_logo{
+    margin-left: 8px;
+    z-index: 100;
+}
+.slider-img{
+        width: 230px;
+        height: 180px;
+}
+.menu{
+        padding:90px 0 20px 4px;
+}
+.menu ul li a p{
+    padding: 5px 5px;
+}
+}
