@@ -62,8 +62,10 @@ body{
 .slider{
         display: flex;
         overflow-x: scroll;
-        scrollbar-width:none;
+        scrollbar-width:thin;
+        scrollbar-color: blue transparent;
         scroll-snap-type: x mandatory ;
+        padding: 20px 0;
     }
 .slider > .slide-a{
         flex: 0 0 100%;
