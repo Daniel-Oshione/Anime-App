@@ -416,7 +416,28 @@
   type="text/javascript">
 </script>
 <script>
-        // window.addEventListener('load', async function () {
+        window.addEventListener('load', async function () {
+      await Clerk.load()
+  
+      if (Clerk.user) {
+      document.getElementById('profile-icon').innerHTML = `
+        <div id="user-button"></div>
+      `
+
+      const userButtonDiv = document.getElementById('user-button')
+
+      Clerk.mountUserButton(userButtonDiv)
+    } else {
+      document.getElementById('profile-icon').innerHTML = `
+        <div id="sign-in"></div>
+      `
+
+      const signInDiv = document.getElementById('sign-in')
+
+      Clerk.mountSignIn(signInDiv)
+    }
+    })
+            // window.addEventListener('load', async function () {
         //     await Clerk.load();
 
         //     if (Clerk.user) {
@@ -440,26 +461,5 @@
         //         Clerk.mountSignIn(signInDiv); // Mount sign-in component
         //     }
         // });
-        window.addEventListener('load', async function () {
-      await Clerk.load()
-  
-      if (Clerk.user) {
-      document.getElementById('profile-icon').innerHTML = `
-        <div id="user-button"></div>
-      `
-
-      const userButtonDiv = document.getElementById('user-button')
-
-      Clerk.mountUserButton(userButtonDiv)
-    } else {
-      document.getElementById('profile-icon').innerHTML = `
-        <div id="sign-in"></div>
-      `
-
-      const signInDiv = document.getElementById('sign-in')
-
-      Clerk.mountSignIn(signInDiv)
-    }
-    })
 </script>
 </html>
