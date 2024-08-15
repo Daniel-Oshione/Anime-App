@@ -16,6 +16,17 @@ body{
     width: 80vw;
     transition: width 0.5s ease-in-out;
 }
+#profile{
+margin-top: 100px;
+}
+.profile-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.profile-container p{
+    color: black;
+}
 .nav_logo{
     width: 400px;
     height: 100px;
@@ -60,6 +71,14 @@ nav i{
         font-size: 30px;
          margin-right: 10px; 
     }
+.user-section a i:hover{
+color: rgb(158, 158, 240);
+transition: 500ms ease-in-out;
+}
+.navbar_toggle i:hover{
+color: rgb(158, 158, 240);
+transition: 500ms ease-in-out;
+}
 .head-content{
         margin-top: 50px;
     }

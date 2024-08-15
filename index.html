@@ -17,7 +17,7 @@
          <input type="search" name="" id="" placeholder="SEARCH">
                <!-- button to activate drop down menu -->
                 <div class="user-section">
-                <a href=""><i class='bx bx-user-circle'></i></a>
+                <a href="signin.html" id="profile-icon"><i class='bx bx-user-circle'></i></a>
                 <button class="navbar_toggle" id="toggle"><i class='bx bx-menu-alt-right'></i></button>
             </div>
             </div>
@@ -408,4 +408,58 @@
 </div>
 </body>
 <script src="app.js"></script>
+<script
+  async
+  crossorigin="anonymous"
+  data-clerk-publishable-key="pk_test_dW5jb21tb24tcHJpbWF0ZS03LmNsZXJrLmFjY291bnRzLmRldiQ"
+  src="https://uncommon-primate-7.clerk.accounts.dev/npm/@clerk/clerk-js@4/dist/clerk.browser.js"
+  type="text/javascript">
+</script>
+<script>
+        // window.addEventListener('load', async function () {
+        //     await Clerk.load();
+
+        //     if (Clerk.user) {
+        //         // User is logged in
+        //         const profilePic = Clerk.user.profileImageUrl || 'img/profile/profile.png'; // Fallback to default icon
+                
+        //         // Update the profile section with user button
+        //         document.getElementById('profile-icon').innerHTML = `
+        //             <a href="index.html" id="user-button">
+        //                 <img src="${profilePic}" alt="User Profile">
+        //             </a>
+        //         `;
+                
+        //     } else {
+        //         // User is not logged in
+        //         document.getElementById('profile-icon').innerHTML = `
+        //             <div id="sign-in"></div>
+        //         `;
+
+        //         const signInDiv = document.getElementById('sign-in');
+        //         Clerk.mountSignIn(signInDiv); // Mount sign-in component
+        //     }
+        // });
+        window.addEventListener('load', async function () {
+      await Clerk.load()
+  
+      if (Clerk.user) {
+      document.getElementById('profile-icon').innerHTML = `
+        <div id="user-button"></div>
+      `
+
+      const userButtonDiv = document.getElementById('user-button')
+
+      Clerk.mountUserButton(userButtonDiv)
+    } else {
+      document.getElementById('profile-icon').innerHTML = `
+        <div id="sign-in"></div>
+      `
+
+      const signInDiv = document.getElementById('sign-in')
+
+      Clerk.mountSignIn(signInDiv)
+    }
+    })
+</script>
 </html>
