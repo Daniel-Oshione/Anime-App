@@ -17,9 +17,16 @@
          <input type="search" name="" id="" placeholder="SEARCH">
                <!-- button to activate drop down menu -->
                 <div class="user-section">
-                <a href="signin.html" id="profile-icon"><i class='bx bx-user-circle'></i></a>
+                    <div id="profile-container">
+                        <a id="profile-icon-link" onclick="toggleSignInModal()"><i id="profile-icon" class='bx bx-user-circle'></i></a>
+                        <div id="user-avatar" style="display: none;"></div> <!-- Empty div for user avatar -->
+                    </div>
                 <button class="navbar_toggle" id="toggle"><i class='bx bx-menu-alt-right'></i></button>
             </div>
+            </div>
+            <div id="sign-in-modal">
+                <div id="close-modal" onclick="toggleSignInModal()">X</div>
+                <div id="sign-in"></div>
             </div>
         </nav>
         <div class="head-content">
@@ -416,50 +423,55 @@
   type="text/javascript">
 </script>
 <script>
-        window.addEventListener('load', async function () {
-      await Clerk.load()
-  
-      if (Clerk.user) {
-      document.getElementById('profile-icon').innerHTML = `
-        <div id="user-button"></div>
-      `
+async function toggleSignInModal() {
+    const modal = document.getElementById('sign-in-modal');
+    const isModalOpen = modal.style.display === 'block';
 
-      const userButtonDiv = document.getElementById('user-button')
+    if (!isModalOpen) {
+        modal.style.display = 'block';
 
-      Clerk.mountUserButton(userButtonDiv)
+        try {
+            await Clerk.load(); // Load Clerk
+            
+            const signInDiv = document.getElementById('sign-in');
+            Clerk.mountSignIn(signInDiv);
+
+            // Handle sign-in event
+            Clerk.on('signIn', () => {
+                updateUserProfile(); // Call function to update user profile after sign-in
+                modal.style.display = 'none';
+            });
+
+        } catch (error) {
+            console.error("Error loading Clerk:", error);
+        }
     } else {
-      document.getElementById('profile-icon').innerHTML = `
-        <div id="sign-in"></div>
-      `
-
-      const signInDiv = document.getElementById('sign-in')
-
-      Clerk.mountSignIn(signInDiv)
+        modal.style.display = 'none';
+        Clerk.unmountSignIn();
+        document.getElementById('sign-in').innerHTML = ''; 
     }
-    })
-            // window.addEventListener('load', async function () {
-        //     await Clerk.load();
+}
 
-        //     if (Clerk.user) {
-        //         // User is logged in
-        //         const profilePic = Clerk.user.profileImageUrl || 'img/profile/profile.png'; // Fallback to default icon
-                
-        //         // Update the profile section with user button
-        //         document.getElementById('profile-icon').innerHTML = `
-        //             <a href="index.html" id="user-button">
-        //                 <img src="${profilePic}" alt="User Profile">
-        //             </a>
-        //         `;
-                
-        //     } else {
-        //         // User is not logged in
-        //         document.getElementById('profile-icon').innerHTML = `
-        //             <div id="sign-in"></div>
-        //         `;
+async function updateUserProfile() {
+    const user = Clerk.user;
 
-        //         const signInDiv = document.getElementById('sign-in');
-        //         Clerk.mountSignIn(signInDiv); // Mount sign-in component
-        //     }
-        // });
+    if (user) {
+        const profilePic = user.profileImageUrl || 'img/profile/profile.png'; 
+        document.getElementById('profile-icon-link').style.display = 'none'; 
+        document.getElementById('user-avatar').innerHTML = `
+            <img id="profile-icon-img" src="${profilePic}" alt="User Profile" style="width: 24px; height: 24px;">
+        `;
+        document.getElementById('user-avatar').style.display = 'block';
+        alert('Successfully signed in!');
+    }
+}
+
+window.addEventListener('load', async function () {
+    await Clerk.load();
+
+    if (Clerk.user) {
+        updateUserProfile();
+    }
+});
 </script>
 </html>
