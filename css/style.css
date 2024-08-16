@@ -298,11 +298,12 @@ padding: 2px 8px;
 .slider-img{
     width: 350px;
 }
-.menu{
-    width: 70vw;
-}
 .menu ul li a p{
     font-size: 10px;
+}
+#sign-in{
+    transform: scale(0.9);
+    top: 10%;
 }
 }
 @media (max-width:470px){
@@ -320,6 +321,24 @@ padding: 2px 8px;
 }
 .popular{
     padding-left: 50px;
+}
+}
+@media (max-width:440px){
+.container{
+    width: 75vw;
+}
+.menu{
+    width: 25vw;
+}
+}
+@media (max-width:425px){
+#sign-in{
+        transform: scale(0.8);
+        top: 10%;
+        right: 5%;
+}
+#close-modal{
+    transform: scale(0.7);
 }
 }
 @media (max-width:404px){
