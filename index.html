@@ -1,477 +1,718 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Afromanga</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="./img/logo/logonobg.png" type="image/x-icon">
-</head>
-<body>
-<div class="main-container">
-    <div class="container">
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./img/logo/logonobg.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
         <nav>
-            <div class="nav_visible">
-         <img src="./img/logo/logonobg.png" alt="" class="nav_logo">
-         <input type="search" name="" id="searchBox" placeholder="SEARCH">
-               <!-- button to activate drop down menu -->
-                <div class="user-section">
-                    <div id="profile-container">
-                        <a id="profile-icon-link" onclick="toggleSignInModal()"><i id="profile-icon" class='bx bx-user-circle'></i></a>
-                        <div id="user-avatar" style="display: none;"></div> <!-- Empty div for user avatar -->
-                    </div>
-                <button class="navbar_toggle" id="toggle"><i class='bx bx-menu-alt-right'></i></button>
+          <div class="nav_visible">
+            <img src="./img/logo/logonobg.png" alt="" class="nav_logo" />
+            <input type="search" name="" id="searchBox" placeholder="SEARCH" />
+            <!-- button to activate drop down menu -->
+            <div class="user-section">
+              <div id="profile-container">
+                <a id="profile-icon-link" onclick="toggleSignInModal()"
+                  ><i id="profile-icon" class="bx bx-user-circle"></i
+                ></a>
+                <div id="user-avatar" style="display: none"></div>
+                <!-- Empty div for user avatar -->
+              </div>
+              <button class="navbar_toggle" id="toggle">
+                <i class="bx bx-menu-alt-right"></i>
+              </button>
             </div>
-            </div>
-            <div id="sign-in-modal">
-                <div id="close-modal" onclick="toggleSignInModal()">X</div>
-                <div id="sign-in"></div>
-            </div>
+          </div>
+          <div id="sign-in-modal">
+            <div id="close-modal" onclick="toggleSignInModal()">X</div>
+            <div id="sign-in"></div>
+          </div>
         </nav>
         <div class="head-content">
-                 <h1 class="popular">
-                    Popular new titles 🔥
-                 </h1>
-                 <div class="slider">
-                 <div class="slide-a">
-                 <div class="slide-description">
-                    <img src="./img/slider/onepiece.jpg" alt="" class="slider-img">
-                    <div class="slider-text"> 
-                        <a href="#"><h1>
-                            One Piece
-                        </h1>
-                        </a>
-                        <div class="genre">
-                        <p>
-                            <span style="background-color: red; padding: 1px 5px;">Action</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: gold; padding: 1px 5px;">Adventure</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: blue; padding: 1px 5px;">Fantasy</span>
-                        </p>             
-                        </div>
-                        <p class="anime-description">
-                            One Piece is an epic anime that follows the journey of Monkey D. Luffy, a young and <br>
-                            adventurous pirate captain with a dream to find the legendary treasure known as the <br>
-                            One Piece. Alongside his diverse crew, the Straw Hat Pirates, Luffy navigates through <br>
-                            the treacherous waters of the Grand Line, encountering powerful foes, forming alliances, <br>
-                            and facing unimaginable challenges. The series is filled with action-packed battles, emotional <br>
-                            moments, humor, and a richly developed world full of unique characters and intricate storylines. <br>
-                            As Luffy progresses towards his ultimate goal, the themes of friendship, loyalty, freedom, and pursuing <br>
-                            one's dreams are woven throughout the narrative, making it a compelling and compelling tale of adventure, <br>
-                            camaraderie, and the pursuit of one's destiny.
-                        </p>
-                    </div>
-                 </div>
+          <h1 class="popular">Popular new titles 🔥</h1>
+          <div class="slider">
+            <div class="slide-a">
+              <div class="slide-description">
+                <img
+                  src="./img/slider/onepiece.jpg"
+                  alt=""
+                  class="slider-img"
+                />
+                <div class="slider-text">
+                  <a href="#"><h1>One Piece</h1> </a>
+                  <div class="genre">
+                    <p>
+                      <span style="background-color: red; padding: 1px 5px"
+                        >Action</span
+                      >
+                    </p>
+                    <p>
+                      <span style="background-color: gold; padding: 1px 5px"
+                        >Adventure</span
+                      >
+                    </p>
+                    <p>
+                      <span style="background-color: blue; padding: 1px 5px"
+                        >Fantasy</span
+                      >
+                    </p>
+                  </div>
+                  <p class="anime-description">
+                    One Piece is an epic anime that follows the journey of
+                    Monkey D. Luffy, a young and <br />
+                    adventurous pirate captain with a dream to find the
+                    legendary treasure known as the <br />
+                    One Piece. Alongside his diverse crew, the Straw Hat
+                    Pirates, Luffy navigates through <br />
+                    the treacherous waters of the Grand Line, encountering
+                    powerful foes, forming alliances, <br />
+                    and facing unimaginable challenges. The series is filled
+                    with action-packed battles, emotional <br />
+                    moments, humor, and a richly developed world full of unique
+                    characters and intricate storylines. <br />
+                    As Luffy progresses towards his ultimate goal, the themes of
+                    friendship, loyalty, freedom, and pursuing <br />
+                    one's dreams are woven throughout the narrative, making it a
+                    compelling and compelling tale of adventure, <br />
+                    camaraderie, and the pursuit of one's destiny.
+                  </p>
+                </div>
+              </div>
             </div>
-                 <div class="slide-a">
-                 <div class="slide-description">
-                    <img src="./img/slider/jojo.jpg" alt="" class="slider-img">
-                    <div class="slider-text"> 
-                        <a href="#"><h1>
-                            Jojos Bizzare Adventures
-                        </h1>
-                        </a>
-                        <div class="genre">
-                        <p>
-                            <span style="background-color: red; padding: 1px 5px;">Action</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: gold; padding: 1px 5px;">Adventure</span>
-                        </p>             
-                        <p>
-                            <span style="background-color:gray; padding: 1px 5px;">Supernatural</span>
-                        </p>             
-                        <p>
-                            <span style="background-color:rgb(208, 0, 255); padding: 1px 5px;">Shounen</span>
-                        </p>            
-                        </div>
-                        <p class="anime-description">
-                            JoJo's Bizarre Adventure is a one-of-a-kind anime that blends action, adventure, and <br>
-                             a touch of the supernatural in a truly unique way. Follow the Joestar family through generations <br>
-                              as they navigate extraordinary abilities and face off against formidable enemies. With <br>
-                               intriguing characters like the iconic JoJos, each with their own distinct personalities and <br>
-                                powers, this series offers a thrilling ride filled with epic battles and unexpected twists. <br>
-                                 If you're ready for a wild and unpredictable anime experience, JoJo's Bizarre Adventure is <br>
-                                  definitely worth checking out!
-                        </p>
-                    </div>
-                 </div>
+            <div class="slide-a">
+              <div class="slide-description">
+                <img src="./img/slider/jojo.jpg" alt="" class="slider-img" />
+                <div class="slider-text">
+                  <a href="#"><h1>Jojos Bizzare Adventures</h1> </a>
+                  <div class="genre">
+                    <p>
+                      <span style="background-color: red; padding: 1px 5px"
+                        >Action</span
+                      >
+                    </p>
+                    <p>
+                      <span style="background-color: gold; padding: 1px 5px"
+                        >Adventure</span
+                      >
+                    </p>
+                    <p>
+                      <span style="background-color: gray; padding: 1px 5px"
+                        >Supernatural</span
+                      >
+                    </p>
+                    <p>
+                      <span
+                        style="
+                          background-color: rgb(208, 0, 255);
+                          padding: 1px 5px;
+                        "
+                        >Shounen</span
+                      >
+                    </p>
+                  </div>
+                  <p class="anime-description">
+                    JoJo's Bizarre Adventure is a one-of-a-kind anime that
+                    blends action, adventure, and <br />
+                    a touch of the supernatural in a truly unique way. Follow
+                    the Joestar family through generations <br />
+                    as they navigate extraordinary abilities and face off
+                    against formidable enemies. With <br />
+                    intriguing characters like the iconic JoJos, each with their
+                    own distinct personalities and <br />
+                    powers, this series offers a thrilling ride filled with epic
+                    battles and unexpected twists. <br />
+                    If you're ready for a wild and unpredictable anime
+                    experience, JoJo's Bizarre Adventure is <br />
+                    definitely worth checking out!
+                  </p>
+                </div>
+              </div>
             </div>
-                 <div class="slide-a">
-                 <div class="slide-description">
-                    <img src="./img/slider/naruto.jpg" alt="" class="slider-img">
-                    <div class="slider-text"> 
-                        <a href="#"><h1>
-                            Naruto
-                        </h1>
-                        </a>
-                        <div class="genre">
-                        <p>
-                            <span style="background-color: red; padding: 1px 5px;">Action</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: grey; padding: 1px 5px;">Adventure</span>
-                        </p>                       
-                        <p>
-                            <span style="background-color: greenyellow; padding: 1px 5px;">Comedy</span>
-                        </p>             
-                        <p>
-                            <span style="background-color:aqua; padding: 1px 5px;">Taijutsu</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: rgb(208, 0, 255); padding: 1px 5px;">Shounen</span>
-                        </p>             
-                        </div>
-                        <p class="anime-description">
-                            Naruto is a beloved anime series that tells the tale of Naruto Uzumaki, a spirited young <br>
-                             ninja with dreams of becoming the strongest ninja and the leader of his village, known as the <br>
-                              Hokage. Born with a powerful and mysterious spirit fox demon sealed within him, Naruto faces prejudice <br>
-                               and loneliness growing up in the Hidden Leaf Village. As Naruto trains tirelessly to prove his worth and <br>
-                                protect his loved ones, he uncovers his true potential and learns valuable lessons about friendship, <br>
-                                 perseverance, and the importance of never giving up on one's dream. With themes of redemption, sacrifice, <br>
-                                  and the power of believing in oneself, Naruto is a coming of age story that resonates with audiences of <br>
-                                   all ages and has left a lasting impact on the world of anime.
-                        </p>
-                    </div>
-                 </div>
+            <div class="slide-a">
+              <div class="slide-description">
+                <img src="./img/slider/naruto.jpg" alt="" class="slider-img" />
+                <div class="slider-text">
+                  <a href="#"><h1>Naruto</h1> </a>
+                  <div class="genre">
+                    <p>
+                      <span style="background-color: red; padding: 1px 5px"
+                        >Action</span
+                      >
+                    </p>
+                    <p>
+                      <span style="background-color: grey; padding: 1px 5px"
+                        >Adventure</span
+                      >
+                    </p>
+                    <p>
+                      <span
+                        style="background-color: greenyellow; padding: 1px 5px"
+                        >Comedy</span
+                      >
+                    </p>
+                    <p>
+                      <span style="background-color: aqua; padding: 1px 5px"
+                        >Taijutsu</span
+                      >
+                    </p>
+                    <p>
+                      <span
+                        style="
+                          background-color: rgb(208, 0, 255);
+                          padding: 1px 5px;
+                        "
+                        >Shounen</span
+                      >
+                    </p>
+                  </div>
+                  <p class="anime-description">
+                    Naruto is a beloved anime series that tells the tale of
+                    Naruto Uzumaki, a spirited young <br />
+                    ninja with dreams of becoming the strongest ninja and the
+                    leader of his village, known as the <br />
+                    Hokage. Born with a powerful and mysterious spirit fox demon
+                    sealed within him, Naruto faces prejudice <br />
+                    and loneliness growing up in the Hidden Leaf Village. As
+                    Naruto trains tirelessly to prove his worth and <br />
+                    protect his loved ones, he uncovers his true potential and
+                    learns valuable lessons about friendship, <br />
+                    perseverance, and the importance of never giving up on one's
+                    dream. With themes of redemption, sacrifice, <br />
+                    and the power of believing in oneself, Naruto is a coming of
+                    age story that resonates with audiences of <br />
+                    all ages and has left a lasting impact on the world of
+                    anime.
+                  </p>
+                </div>
+              </div>
             </div>
-                 <div class="slide-a">
-                 <div class="slide-description">
-                    <img src="./img/slider/bleach.jpg" alt="" class="slider-img">
-                    <div class="slider-text"> 
-                        <a href="#"><h1>
-                            Bleach
-                        </h1>
-                        </a>
-                        <div class="genre">
-                        <p>
-                            <span style="background-color: red; padding: 1px 5px;">Action</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: gold; padding: 1px 5px;">Adventure</span>
-                        </p>             
-                        <p>
-                            <span style="background-color:gray; padding: 1px 5px;">Supernatural</span>
-                        </p>             
-                        <p>
-                            <span style="background-color:rgb(208, 0, 255); padding: 1px 5px;">Shounen</span>
-                        </p>             
-                        </div>
-                        <p class="anime-description">
-    
-                            Bleach is an exhilarating anime series that follows the journey of Ichigo Kurosaki, a <br>
-                             high school student with the ability to see spirits. One fateful day, he encounters a Soul <br>
-                              Reaper named Rukia Kuchiki, who bestows her powers upon him to defeat a malevolent spirit <br>
-                               known as a Hollow. As Ichigo assumes the duties of a Soul Reaper, he navigates the dangerous <br>
-                                spirit world, battles powerful foes, and protects the living world from supernatural threats. <br>
-                                Bleach offers a captivating blend of action, mystery, and supernatural elements that keep viewers <br>
-                                 on the edge of their seats. The series delves into profound questions of identity, duty, and <br>
-                                  the consequences of wielding power, making it a must watch for fans of thrilling adventures with <br>
-                                   a touch of the supernatural.
-                        </p>
-                    </div>
-                 </div>
+            <div class="slide-a">
+              <div class="slide-description">
+                <img src="./img/slider/bleach.jpg" alt="" class="slider-img" />
+                <div class="slider-text">
+                  <a href="#"><h1>Bleach</h1> </a>
+                  <div class="genre">
+                    <p>
+                      <span style="background-color: red; padding: 1px 5px"
+                        >Action</span
+                      >
+                    </p>
+                    <p>
+                      <span style="background-color: gold; padding: 1px 5px"
+                        >Adventure</span
+                      >
+                    </p>
+                    <p>
+                      <span style="background-color: gray; padding: 1px 5px"
+                        >Supernatural</span
+                      >
+                    </p>
+                    <p>
+                      <span
+                        style="
+                          background-color: rgb(208, 0, 255);
+                          padding: 1px 5px;
+                        "
+                        >Shounen</span
+                      >
+                    </p>
+                  </div>
+                  <p class="anime-description">
+                    Bleach is an exhilarating anime series that follows the
+                    journey of Ichigo Kurosaki, a <br />
+                    high school student with the ability to see spirits. One
+                    fateful day, he encounters a Soul <br />
+                    Reaper named Rukia Kuchiki, who bestows her powers upon him
+                    to defeat a malevolent spirit <br />
+                    known as a Hollow. As Ichigo assumes the duties of a Soul
+                    Reaper, he navigates the dangerous <br />
+                    spirit world, battles powerful foes, and protects the living
+                    world from supernatural threats. <br />
+                    Bleach offers a captivating blend of action, mystery, and
+                    supernatural elements that keep viewers <br />
+                    on the edge of their seats. The series delves into profound
+                    questions of identity, duty, and <br />
+                    the consequences of wielding power, making it a must watch
+                    for fans of thrilling adventures with <br />
+                    a touch of the supernatural.
+                  </p>
+                </div>
+              </div>
             </div>
-                 <div class="slide-a">
-                 <div class="slide-description">
-                    <img src="./img/slider/dragon.jpg" alt="" class="slider-img">
-                    <div class="slider-text"> 
-                        <a href="#"><h1>
-                            Dragon ball
-                        </h1>
-                        </a>
-                        <div class="genre">
-                        <p>
-                            <span style="background-color: red; padding: 1px 5px;">Action</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: gold; padding: 1px 5px;">Adventure</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: blue; padding: 1px 5px;">Fantasy</span>
-                        </p>   
-                        <p>
-                            <span style="background-color:aqua; padding: 1px 5px;">Taijutsu</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: rgb(208, 0, 255); padding: 1px 5px;">Shounen</span>
-                        </p>            
-                        </div>
-                        <p class="anime-description">
-                            Embark on an exhilarating journey with Son Goku in Dragon Ball, a tale of courage, friendship, <br>
-                             and the pursuit of ultimate power. Follow Goku's quest to collect the mystical Dragon Balls, <br>
-                              encountering thrilling battles and forming unbreakable bonds along the way. From his humble <br>
-                               beginnings as a young martial artist to his epic showdowns against powerful foes, Goku's story <br>
-                                is a captivating blend of action, humor, and heartwarming moments that will keep you hooked from the <br>
-                                 very first panel. Experience the magic of Dragon Ball as Goku pushes himself beyond his limits, <br>
-                                  unlocking new levels of strength and determination.
-                        </p>
-                    </div>
-                 </div>
+            <div class="slide-a">
+              <div class="slide-description">
+                <img src="./img/slider/dragon.jpg" alt="" class="slider-img" />
+                <div class="slider-text">
+                  <a href="#"><h1>Dragon ball</h1> </a>
+                  <div class="genre">
+                    <p>
+                      <span style="background-color: red; padding: 1px 5px"
+                        >Action</span
+                      >
+                    </p>
+                    <p>
+                      <span style="background-color: gold; padding: 1px 5px"
+                        >Adventure</span
+                      >
+                    </p>
+                    <p>
+                      <span style="background-color: blue; padding: 1px 5px"
+                        >Fantasy</span
+                      >
+                    </p>
+                    <p>
+                      <span style="background-color: aqua; padding: 1px 5px"
+                        >Taijutsu</span
+                      >
+                    </p>
+                    <p>
+                      <span
+                        style="
+                          background-color: rgb(208, 0, 255);
+                          padding: 1px 5px;
+                        "
+                        >Shounen</span
+                      >
+                    </p>
+                  </div>
+                  <p class="anime-description">
+                    Embark on an exhilarating journey with Son Goku in Dragon
+                    Ball, a tale of courage, friendship, <br />
+                    and the pursuit of ultimate power. Follow Goku's quest to
+                    collect the mystical Dragon Balls, <br />
+                    encountering thrilling battles and forming unbreakable bonds
+                    along the way. From his humble <br />
+                    beginnings as a young martial artist to his epic showdowns
+                    against powerful foes, Goku's story <br />
+                    is a captivating blend of action, humor, and heartwarming
+                    moments that will keep you hooked from the <br />
+                    very first panel. Experience the magic of Dragon Ball as
+                    Goku pushes himself beyond his limits, <br />
+                    unlocking new levels of strength and determination.
+                  </p>
+                </div>
+              </div>
             </div>
-                 <div class="slide-a">
-                 <div class="slide-description">
-                    <img src="./img/slider/aot.jpg" alt="" class="slider-img">
-                    <div class="slider-text"> 
-                        <a href="#"><h1>
-                        Attack on Titans
-                        </h1>
-                        </a>
-                        <div class="genre">
-                        <p>
-                            <span style="background-color: red; padding: 1px 5px;">Action</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: orangered; padding: 1px 5px;">Fantasy</span>
-                        </p>             
-                        <p>
-                            <span style="background-color:cornflowerblue; padding: 1px 5px;">Horror</span>
-                        </p>             
-                        <p>
-                            <span style="background-color:rgb(237, 100, 187); padding: 1px 5px;">Drama</span>
-                        </p>             
-                        <p>
-                            <span style="background-color:rgb(255, 230, 0); padding: 1px 5px;">Thriller</span>
-                        </p>             
-                        </div>
-                        <p class="anime-description">
-                            Attack on Titan revolves around a civilization enclosed within three circular walls to <br>
-                             protect themselves from various types of Titans. These Titans pose a threat to humanity, <br>
-                             with Pure Titans being created by a mysterious power. The protagonist, Eren Jaeger, witnesses <br>
-                              the destruction of his hometown and vows to eradicate the Titans. The narrative unfolds into <br>
-                               a gripping war story as Eren, along with other characters, navigates through battles, political <br>
-                                intrigue, and personal revelations. The series delves into themes of survival, sacrifice, and <br>
-                                 the complexities of human nature amidst the ongoing conflict between humans and Titans.
-                        </p>
-                    </div>
-                 </div>
+            <div class="slide-a">
+              <div class="slide-description">
+                <img src="./img/slider/aot.jpg" alt="" class="slider-img" />
+                <div class="slider-text">
+                  <a href="#"><h1>Attack on Titans</h1> </a>
+                  <div class="genre">
+                    <p>
+                      <span style="background-color: red; padding: 1px 5px"
+                        >Action</span
+                      >
+                    </p>
+                    <p>
+                      <span
+                        style="background-color: orangered; padding: 1px 5px"
+                        >Fantasy</span
+                      >
+                    </p>
+                    <p>
+                      <span
+                        style="
+                          background-color: cornflowerblue;
+                          padding: 1px 5px;
+                        "
+                        >Horror</span
+                      >
+                    </p>
+                    <p>
+                      <span
+                        style="
+                          background-color: rgb(237, 100, 187);
+                          padding: 1px 5px;
+                        "
+                        >Drama</span
+                      >
+                    </p>
+                    <p>
+                      <span
+                        style="
+                          background-color: rgb(255, 230, 0);
+                          padding: 1px 5px;
+                        "
+                        >Thriller</span
+                      >
+                    </p>
+                  </div>
+                  <p class="anime-description">
+                    Attack on Titan revolves around a civilization enclosed
+                    within three circular walls to <br />
+                    protect themselves from various types of Titans. These
+                    Titans pose a threat to humanity, <br />
+                    with Pure Titans being created by a mysterious power. The
+                    protagonist, Eren Jaeger, witnesses <br />
+                    the destruction of his hometown and vows to eradicate the
+                    Titans. The narrative unfolds into <br />
+                    a gripping war story as Eren, along with other characters,
+                    navigates through battles, political <br />
+                    intrigue, and personal revelations. The series delves into
+                    themes of survival, sacrifice, and <br />
+                    the complexities of human nature amidst the ongoing conflict
+                    between humans and Titans.
+                  </p>
+                </div>
+              </div>
             </div>
-                 <div class="slide-a">
-                 <div class="slide-description">
-                    <img src="./img/slider/demonslayer.jpg" alt="" class="slider-img">
-                    <div class="slider-text"> 
-                        <a href="#"><h1>
-                            Demon slayer
-                        </h1>
-                        </a>
-                        <div class="genre">
-                        <p>
-                            <span style="background-color: red; padding: 1px 5px;">Action</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: gold; padding: 1px 5px;">Adventure</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: blue; padding: 1px 5px;">Fantasy</span>
-                        </p>             
-                        <p>
-                            <span style="background-color:gray; padding: 1px 5px;">Supernatural</span>
-                        </p>             
-                        </div>
-                        <p class="anime-description">
-                            Demon Slayer, also known as Kimetsu no Yaiba in Japanese, is a popular anime and manga <br>
-                             series that follows the story of Tanjiro Kamado, a kind-hearted boy who becomes a demon <br>
-                             slayer after his family is slaughtered by demons, with his sister Nezuko turning into a demon <br>
-                             herself. Tanjiro seeks to avenge his family and find a way to turn his sister back into a human. <br>
-                             Along his journey, he joins the Demon Slayer Corps, a group of demon slayers who combat demons and <br>
-                             protect humanity. The series is known for its stunning animation, intense action sequences, compelling <br>
-                             characters, and emotional storytelling. As Tanjiro battles powerful demons and uncovers dark secrets about <br>
-                              their origins, he learns valuable lessons about strength, perseverance, and the true nature of demons and humanity.
-                        </p>
-                    </div>
-                 </div>
+            <div class="slide-a">
+              <div class="slide-description">
+                <img
+                  src="./img/slider/demonslayer.jpg"
+                  alt=""
+                  class="slider-img"
+                />
+                <div class="slider-text">
+                  <a href="#"><h1>Demon slayer</h1> </a>
+                  <div class="genre">
+                    <p>
+                      <span style="background-color: red; padding: 1px 5px"
+                        >Action</span
+                      >
+                    </p>
+                    <p>
+                      <span style="background-color: gold; padding: 1px 5px"
+                        >Adventure</span
+                      >
+                    </p>
+                    <p>
+                      <span style="background-color: blue; padding: 1px 5px"
+                        >Fantasy</span
+                      >
+                    </p>
+                    <p>
+                      <span style="background-color: gray; padding: 1px 5px"
+                        >Supernatural</span
+                      >
+                    </p>
+                  </div>
+                  <p class="anime-description">
+                    Demon Slayer, also known as Kimetsu no Yaiba in Japanese, is
+                    a popular anime and manga <br />
+                    series that follows the story of Tanjiro Kamado, a
+                    kind-hearted boy who becomes a demon <br />
+                    slayer after his family is slaughtered by demons, with his
+                    sister Nezuko turning into a demon <br />
+                    herself. Tanjiro seeks to avenge his family and find a way
+                    to turn his sister back into a human. <br />
+                    Along his journey, he joins the Demon Slayer Corps, a group
+                    of demon slayers who combat demons and <br />
+                    protect humanity. The series is known for its stunning
+                    animation, intense action sequences, compelling <br />
+                    characters, and emotional storytelling. As Tanjiro battles
+                    powerful demons and uncovers dark secrets about <br />
+                    their origins, he learns valuable lessons about strength,
+                    perseverance, and the true nature of demons and humanity.
+                  </p>
+                </div>
+              </div>
             </div>
-                 <div class="slide-a">
-                 <div class="slide-description">
-                    <img src="./img/slider/myhero.jpg" alt="" class="slider-img">
-                    <div class="slider-text"> 
-                        <a href="#"><h1>
-                            My Hero Acadamia
-                        </h1>
-                        </a>
-                        <div class="genre">
-                        <p>
-                            <span style="background-color: red; padding: 1px 5px;">Action</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: greenyellow; padding: 1px 5px;">Comedy</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: rgb(208, 0, 255); padding: 1px 5px;">Shounen</span>
-                        </p>             
-                        </div>
-                        <p class="anime-description">
-                            My Hero Academia is a popular manga and anime series set in a world where superpowers, <br>
-                            known as "Quirks," are common. The story follows Izuku Midoriya, a boy born without a Quirk but <br>
-                            determined to become a hero. He enrolls in a prestigious hero academy and learns the true meaning <br>
-                            of heroism. The series, created by Kohei Horikoshi, explores themes of courage, friendship, and the <br>
-                            challenges of growing up in a world full of heroes and villains. With its engaging storyline and diverse <br>
-                            cast of characters, **My Hero Academia** has captured the hearts of fans worldwide.
-                        </p>
-                    </div>
-                 </div>
+            <div class="slide-a">
+              <div class="slide-description">
+                <img src="./img/slider/myhero.jpg" alt="" class="slider-img" />
+                <div class="slider-text">
+                  <a href="#"><h1>My Hero Acadamia</h1> </a>
+                  <div class="genre">
+                    <p>
+                      <span style="background-color: red; padding: 1px 5px"
+                        >Action</span
+                      >
+                    </p>
+                    <p>
+                      <span
+                        style="background-color: greenyellow; padding: 1px 5px"
+                        >Comedy</span
+                      >
+                    </p>
+                    <p>
+                      <span
+                        style="
+                          background-color: rgb(208, 0, 255);
+                          padding: 1px 5px;
+                        "
+                        >Shounen</span
+                      >
+                    </p>
+                  </div>
+                  <p class="anime-description">
+                    My Hero Academia is a popular manga and anime series set in
+                    a world where superpowers, <br />
+                    known as "Quirks," are common. The story follows Izuku
+                    Midoriya, a boy born without a Quirk but <br />
+                    determined to become a hero. He enrolls in a prestigious
+                    hero academy and learns the true meaning <br />
+                    of heroism. The series, created by Kohei Horikoshi, explores
+                    themes of courage, friendship, and the <br />
+                    challenges of growing up in a world full of heroes and
+                    villains. With its engaging storyline and diverse <br />
+                    cast of characters, **My Hero Academia** has captured the
+                    hearts of fans worldwide.
+                  </p>
+                </div>
+              </div>
             </div>
-                 <div class="slide-a">
-                 <div class="slide-description">
-                    <img src="./img/slider/sololeveling.jpg" alt="" class="slider-img">
-                    <div class="slider-text"> 
-                        <a href="#"><h1>
-                            Solo Leveing
-                        </h1>
-                        </a>
-                        <div class="genre">
-                        <p>
-                            <span style="background-color: red; padding: 1px 5px;">Action</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: gold; padding: 1px 5px;">Adventure</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: blue; padding: 1px 5px;">Fantasy</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: rgb(255, 0, 128); padding: 1px 5px;">Isekai</span>
-                        </p>             
-                        </div>
-                        <p class="anime-description">
-                            This story follows Sung Jin-Woo, a weak and low-ranked hunter who unexpectedly gains the <br>
-                             ability to level up in strength and skills, akin to a video game character. After a disastrous <br>
-                              dungeon raid, Jin-Woo finds himself in a unique position where he can grow stronger at an <br>
-                              unprecedented rate, allowing him to face formidable foes and uncover the mysteries of the world <br>
-                               inhabited by dangerous monsters. As he progresses, he not only transforms from the "world's weakest" <br>
-                                hunter into one of the most powerful beings, but also encounters various characters and challenges <br>
-                                 that test his resolve and abilities.
-                        </p>
-                    </div>
-                 </div>
+            <div class="slide-a">
+              <div class="slide-description">
+                <img
+                  src="./img/slider/sololeveling.jpg"
+                  alt=""
+                  class="slider-img"
+                />
+                <div class="slider-text">
+                  <a href="#"><h1>Solo Leveing</h1> </a>
+                  <div class="genre">
+                    <p>
+                      <span style="background-color: red; padding: 1px 5px"
+                        >Action</span
+                      >
+                    </p>
+                    <p>
+                      <span style="background-color: gold; padding: 1px 5px"
+                        >Adventure</span
+                      >
+                    </p>
+                    <p>
+                      <span style="background-color: blue; padding: 1px 5px"
+                        >Fantasy</span
+                      >
+                    </p>
+                    <p>
+                      <span
+                        style="
+                          background-color: rgb(255, 0, 128);
+                          padding: 1px 5px;
+                        "
+                        >Isekai</span
+                      >
+                    </p>
+                  </div>
+                  <p class="anime-description">
+                    This story follows Sung Jin-Woo, a weak and low-ranked
+                    hunter who unexpectedly gains the <br />
+                    ability to level up in strength and skills, akin to a video
+                    game character. After a disastrous <br />
+                    dungeon raid, Jin-Woo finds himself in a unique position
+                    where he can grow stronger at an <br />
+                    unprecedented rate, allowing him to face formidable foes and
+                    uncover the mysteries of the world <br />
+                    inhabited by dangerous monsters. As he progresses, he not
+                    only transforms from the "world's weakest" <br />
+                    hunter into one of the most powerful beings, but also
+                    encounters various characters and challenges <br />
+                    that test his resolve and abilities.
+                  </p>
+                </div>
+              </div>
             </div>
-                 <div class="slide-a">
-                 <div class="slide-description">
-                    <img src="./img/slider/onepunch.jpg" alt="" class="slider-img">
-                    <div class="slider-text"> 
-                        <a href="#"><h1>
-                            One Punch Man
-                        </h1>
-                        </a>
-                        <div class="genre">
-                        <p>
-                            <span style="background-color: red; padding: 1px 5px;">Action</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: greenyellow; padding: 1px 5px;">Comedy</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: rgb(0, 132, 255); padding: 1px 5px;">Superhero</span>
-                        </p>             
-                        <p>
-                            <span style="background-color: rgb(0, 255, 132); padding: 1px 5px;">Parody</span>
-                        </p>             
-                        </div>
-                        <p class="anime-description">
-                            The story centers around Saitama, an unassuming and seemingly average man who becomes a <br>
-                             hero for fun. Despite his mundane appearance, Saitama possesses unmatched strength, capable <br>
-                              of defeating any opponent with a single punch. This overwhelming power leads to a profound <br>
-                               sense of boredom and dissatisfaction, as he longs for a worthy adversary to challenge him. <br>
-                                The series cleverly satirizes the superhero genre, blending humor with intense action sequences <br>
-                                while exploring themes of heroism, identity, and the nature of strength. 
-                        </p>
-                    </div>
-                 </div>
+            <div class="slide-a">
+              <div class="slide-description">
+                <img
+                  src="./img/slider/onepunch.jpg"
+                  alt=""
+                  class="slider-img"
+                />
+                <div class="slider-text">
+                  <a href="#"><h1>One Punch Man</h1> </a>
+                  <div class="genre">
+                    <p>
+                      <span style="background-color: red; padding: 1px 5px"
+                        >Action</span
+                      >
+                    </p>
+                    <p>
+                      <span
+                        style="background-color: greenyellow; padding: 1px 5px"
+                        >Comedy</span
+                      >
+                    </p>
+                    <p>
+                      <span
+                        style="
+                          background-color: rgb(0, 132, 255);
+                          padding: 1px 5px;
+                        "
+                        >Superhero</span
+                      >
+                    </p>
+                    <p>
+                      <span
+                        style="
+                          background-color: rgb(0, 255, 132);
+                          padding: 1px 5px;
+                        "
+                        >Parody</span
+                      >
+                    </p>
+                  </div>
+                  <p class="anime-description">
+                    The story centers around Saitama, an unassuming and
+                    seemingly average man who becomes a <br />
+                    hero for fun. Despite his mundane appearance, Saitama
+                    possesses unmatched strength, capable <br />
+                    of defeating any opponent with a single punch. This
+                    overwhelming power leads to a profound <br />
+                    sense of boredom and dissatisfaction, as he longs for a
+                    worthy adversary to challenge him. <br />
+                    The series cleverly satirizes the superhero genre, blending
+                    humor with intense action sequences <br />
+                    while exploring themes of heroism, identity, and the nature
+                    of strength.
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-        <div class="mid-content">
-
-        </div>
-    </div>
-    <div class="menu">
-        <ul> 
-            <li><a href="#"><p class="drop_page"><i class='bx bx-home-alt-2'></i> Home</p></a></li>
-            <li><a href="#"><p><i class='bx bx-bookmark' ></i> Follow</p></a></li>
-            <li><a href="#"><p>Updates</p></a></li>
-            <li><a href="hentai.html"><p>Hentai</p></a></li>
-            <li><a href="#"><p>Libraries</p></a></li>
-            <li><a href="#"><p>MDlist</p></a></li>
-            <li><a href="#"><p>My Groups</p></a></li>
-            <li><a href="#"><p>Reading History</p></a></li>
-            <li><a href="#"><p><i class='bx bxs-book-open'></i> Titles</p></a></li>
-            <li><a href="#"><p>Advanced Search</p></a></li>
-            <li><a href="#"><p>Recently Added</p></a></li>
-            <li><a href="#"><p>Latest Updates</p></a></li>
-            <li><a href="#"><p>Random</p></a></li>
-            <li><a href="#"><p><i class='bx bxs-network-chart'></i> Community</p></a></li>
-            <li><a href="#"><p>Forums</p></a></li>
-            <li><a href="#"><p>Groups</p></a></li>
-            <li><a href="#"><p>Users</p></a></li>
-            <li><a href="#"><p><i class='bx bx-pin'></i> Afromanga</p></a></li>
-            <li><a href="#"><p>SUpport us</p></a></li>
-            <li><a href="#"><p>COntact us</p></a></li>
+        <div class="mid-content"></div>
+      </div>
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="#"
+              ><p class="drop_page"><i class="bx bx-home-alt-2"></i> Home</p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><p><i class="bx bx-bookmark"></i> Follow</p></a
+            >
+          </li>
+          <li>
+            <a href="#"><p>Updates</p></a>
+          </li>
+          <li>
+            <a href="hentai.html"><p>Hentai</p></a>
+          </li>
+          <li>
+            <a href="#"><p>Libraries</p></a>
+          </li>
+          <li>
+            <a href="#"><p>MDlist</p></a>
+          </li>
+          <li>
+            <a href="#"><p>My Groups</p></a>
+          </li>
+          <li>
+            <a href="#"><p>Reading History</p></a>
+          </li>
+          <li>
+            <a href="#"
+              ><p><i class="bx bxs-book-open"></i> Titles</p></a
+            >
+          </li>
+          <li>
+            <a href="#"><p>Advanced Search</p></a>
+          </li>
+          <li>
+            <a href="#"><p>Recently Added</p></a>
+          </li>
+          <li>
+            <a href="#"><p>Latest Updates</p></a>
+          </li>
+          <li>
+            <a href="#"><p>Random</p></a>
+          </li>
+          <li>
+            <a href="#"
+              ><p><i class="bx bxs-network-chart"></i> Community</p></a
+            >
+          </li>
+          <li>
+            <a href="#"><p>Forums</p></a>
+          </li>
+          <li>
+            <a href="#"><p>Groups</p></a>
+          </li>
+          <li>
+            <a href="#"><p>Users</p></a>
+          </li>
+          <li>
+            <a href="#"
+              ><p><i class="bx bx-pin"></i> Afromanga</p></a
+            >
+          </li>
+          <li>
+            <a href="#"><p>SUpport us</p></a>
+          </li>
+          <li>
+            <a href="#"><p>COntact us</p></a>
+          </li>
         </ul>
+      </div>
     </div>
-</div>
-</body>
-<script src="app.js"></script>
-<script
-  async
-  crossorigin="anonymous"
-  data-clerk-publishable-key="pk_test_dW5jb21tb24tcHJpbWF0ZS03LmNsZXJrLmFjY291bnRzLmRldiQ"
-  src="https://uncommon-primate-7.clerk.accounts.dev/npm/@clerk/clerk-js@4/dist/clerk.browser.js"
-  type="text/javascript">
-</script>
-<script>
-async function toggleSignInModal() {
-    const modal = document.getElementById('sign-in-modal');
-    const isModalOpen = modal.style.display === 'block';
+  </body>
+  <script src="app.js"></script>
+  <script
+    async
+    crossorigin="anonymous"
+    data-clerk-publishable-key="pk_test_dW5jb21tb24tcHJpbWF0ZS03LmNsZXJrLmFjY291bnRzLmRldiQ"
+    src="https://uncommon-primate-7.clerk.accounts.dev/npm/@clerk/clerk-js@4/dist/clerk.browser.js"
+    type="text/javascript"
+  ></script>
+  <script>
+    async function toggleSignInModal() {
+      const modal = document.getElementById("sign-in-modal");
+      const isModalOpen = modal.style.display === "block";
 
-    if (!isModalOpen) {
-        modal.style.display = 'block';
+      if (!isModalOpen) {
+        modal.style.display = "block";
 
         try {
-            await Clerk.load(); // Load Clerk
-            
-            const signInDiv = document.getElementById('sign-in');
-            Clerk.mountSignIn(signInDiv);
+          await Clerk.load(); // Load Clerk
 
-            // Handle sign-in event
-            Clerk.on('signIn', () => {
-                updateUserProfile(); // Call function to update user profile after sign-in
-                modal.style.display = 'none';
-            });
+          const signInDiv = document.getElementById("sign-in");
+          Clerk.mountSignIn(signInDiv);
 
+          // Handle sign-in event
+          Clerk.on("signIn", () => {
+            updateUserProfile(); // Call function to update user profile after sign-in
+            modal.style.display = "none";
+          });
         } catch (error) {
-            console.error("Error loading Clerk:", error);
+          console.error("Error loading Clerk:", error);
         }
-    } else {
-        modal.style.display = 'none';
+      } else {
+        modal.style.display = "none";
         Clerk.unmountSignIn();
-        document.getElementById('sign-in').innerHTML = ''; 
+        document.getElementById("sign-in").innerHTML = "";
+      }
     }
-}
 
-async function updateUserProfile() {
-    const user = Clerk.user;
+    async function updateUserProfile() {
+      const user = Clerk.user;
 
-    if (user) {
-        const profilePic = user.profileImageUrl || 'img/profile/profile.png'; 
-        document.getElementById('profile-icon-link').style.display = 'none'; 
-        document.getElementById('user-avatar').innerHTML = `
+      if (user) {
+        const profilePic = user.profileImageUrl || "img/profile/profile.png";
+        document.getElementById("profile-icon-link").style.display = "none";
+        document.getElementById("user-avatar").innerHTML = `
             <img id="profile-icon-img" src="${profilePic}" alt="User Profile" style="width: 24px; height: 24px;">
         `;
-        document.getElementById('user-avatar').style.display = 'block';
-        alert('Successfully signed in!');
+        document.getElementById("user-avatar").style.display = "block";
+        alert("Successfully signed in!");
+      }
     }
-}
 
-window.addEventListener('load', async function () {
-    await Clerk.load();
+    window.addEventListener("load", async function () {
+      await Clerk.load();
 
-    if (Clerk.user) {
+      if (Clerk.user) {
         updateUserProfile();
-    }
-});
-</script>
+      }
+    });
+  </script>
 </html>
