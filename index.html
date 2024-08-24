@@ -20,7 +20,7 @@
       <div class="container">
         <nav>
           <div class="nav_visible">
-            <img src="./img/logo/logonobg.png" alt="" class="nav_logo" />
+            <img src="./img/logo/logonobg.png" alt="" class="nav_logo" id="logo" />
             <input type="search" name="" id="searchBox" placeholder="SEARCH" />
             <!-- button to activate drop down menu -->
             <div class="user-section">
@@ -32,7 +32,7 @@
                 <!-- Empty div for user avatar -->
               </div>
               <button class="navbar_toggle" id="toggle">
-                <i class="bx bx-menu-alt-right"></i>
+                <i class="bx bx-menu-alt-right" id="bars"></i>
               </button>
             </div>
           </div>
@@ -647,13 +647,19 @@
             >
           </li>
           <li>
-            <a href="#"><p>SUpport us</p></a>
+            <a href="#"><p>Support us</p></a>
           </li>
           <li>
-            <a href="#"><p>COntact us</p></a>
+            <a href="#"><p>Contact us</p></a>
           </li>
         </ul>
       </div>
+    </div>
+    <div class="view">
+        <input type="radio" name="theme" id="light" value="light">
+        <label for="light"><i class='bx bxs-sun' id="lightbtn"></i></label>
+        <input type="radio" name="theme" id="dark" value="dark">
+        <label for="dark"><i class='bx bxs-moon' id="darkbtn"></i></label>
     </div>
   </body>
   <script src="app.js"></script>

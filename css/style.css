@@ -1,409 +1,455 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-body{
-    background-color: rgb(29, 29, 29);
-    color: white;
-    overflow-x: hidden;
+body {
+  background-color: #1d1d1d;
+  color: white;
+  overflow-x: hidden;
 }
-.main-container{
-    display: flex;
-    flex-direction: row;
+.main-container {
+  display: flex;
+  flex-direction: row;
 }
-.container{
-    width: 80vw;
-    transition: width 0.5s ease-in-out;
+.container {
+  width: 80vw;
+  transition: width 0.5s ease-in-out;
 }
-.nav_logo{
-    width: 400px;
-    height: 100px;
-    object-fit: cover;
-    overflow-x: hidden;
-    margin-left: -100px;
-    }
-nav i{
-        color: white;
-        cursor: pointer;
-    }
-.nav_visible{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 30px;
-        overflow: hidden;
-        position: sticky;
-        top: 0;
-    }
-.nav_visible input{
-        padding: 5px 10px;
-    }
-.nav_visible input:focus{
-    outline: none;
+.nav_logo {
+  width: 400px;
+  height: 100px;
+  object-fit: cover;
+  overflow-x: hidden;
+  margin-left: -100px;
 }
-.navbar_toggle{
-        display:block;
-        font-size: 35px;
-        background: none;
-        border: none;
-        color: white;
-        z-index: 2;
-        cursor: pointer;
-    }
+nav i {
+  color: white;
+  cursor: pointer;
+}
+.nav_visible {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+}
+.nav_visible input {
+  padding: 5px 10px;
+}
+.nav_visible input:focus {
+  outline: none;
+}
+.navbar_toggle {
+  display: block;
+  font-size: 35px;
+  background: none;
+  border: none;
+  color: white;
+  z-index: 2;
+  cursor: pointer;
+}
 #sign-in-modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color:rgb(69, 66, 254);
-        transition: 500ms ease-in-out;
-    }
-    #close-modal {
-        cursor: pointer;
-        color: white;
-        position: absolute;
-        z-index: 1000;
-        top: 20px;
-        right: 20px;
-        background-color: red;
-        padding: 10px 15px;
-    }
-    #sign-in {
-        position: relative;
-        margin: auto;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 20px;
-        border-radius: 5px;
-        width: 90%;
-        max-width: 500px;
-    }
-.user-section{
-        display: flex;
-        align-items: center;
-    }
-.user-section a i{
-        color: white;
-        font-size: 30px;
-         margin-right: 10px; 
-    }
-.user-section a i:hover{
-color: rgb(158, 158, 240);
-transition: 500ms ease-in-out;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(69, 66, 254);
+  transition: 500ms ease-in-out;
 }
-.navbar_toggle i:hover{
-color: rgb(158, 158, 240);
-transition: 500ms ease-in-out;
+#close-modal {
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  z-index: 1000;
+  top: 20px;
+  right: 20px;
+  background-color: red;
+  padding: 10px 15px;
 }
-.head-content{
-        margin-top: 50px;
-    }
-.slider{
-    position: relative;
-        display: flex;
-        overflow-x: scroll;
-        scrollbar-width:thin;
-        scrollbar-color: blue transparent;
-        scroll-snap-type: x mandatory ;
-        padding: 20px 0;
-    }
-.slider > .slide-a{
-        flex: 0 0 100%;
-        scroll-snap-align: center;
-        }
-.slider-img{
-            height: 250px;
-            width: 300px;
-            object-fit: cover;
-        }
-.slide-description{
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            -webkit-animation: auto-slider 70s infinite;
-        }
-@-webkit-keyframes auto-slider{
-            0%{
-                transform: translateX(0);
-            }
-            10%{
-                transform: translateX(-100%);
-            }
-            20%{
-                transform: translateX(-200%);
-            }
-            30%{
-                transform: translateX(-300%);
-            }
-            40%{
-                transform: translatXe(-400%);
-            }
-            50%{
-                transform: translateX(-500%);
-            }
-            60%{
-                transform: translateX(-600%);
-            }
-            70%{
-                transform: translateX(-700%);
-            }
-            80%{
-                transform: translateX(-800%);
-            }
-            90%{
-                transform: translateX(-900%);
-            }
-            100%{
-                transform: translateX(0%);
-            }
+#sign-in {
+  position: relative;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 500px;
 }
-.popular{
-            padding-left: 85px;
-            margin-bottom: 20px;
-        }
-.genre{
-            display: flex;
-        }
-.genre p{
-            margin: 5px 10px 5px 0;
-        }
-.anime-description{
-            margin-top: 10px;
-            font-size: 13px;
-        }
-.slider-text a{
-        text-decoration: none;
-        color: white;
-        }
-.menu{
-        width: 20vw;
-        background-color: rgb(41, 44, 66);
-        overflow-y: scroll;
-        scrollbar-width:none;
-        height: 100vh;
-        padding: 90px 0 20px 20px;
-        transition: 500ms ease-in-out;
-    }
+.user-section {
+  display: flex;
+  align-items: center;
+}
+.user-section a i {
+  color: white;
+  font-size: 30px;
+  margin-right: 10px;
+}
+.user-section a i:hover {
+  color: rgb(158, 158, 240);
+  transition: 500ms ease-in-out;
+}
+.navbar_toggle i:hover {
+  color: rgb(158, 158, 240);
+  transition: 500ms ease-in-out;
+}
+.head-content {
+  margin-top: 50px;
+}
+.slider {
+  position: relative;
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: blue transparent;
+  scroll-snap-type: x mandatory;
+  padding: 20px 0;
+}
+.slider > .slide-a {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+}
+.slider-img {
+  height: 250px;
+  width: 300px;
+  object-fit: cover;
+}
+.slide-description {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  -webkit-animation: auto-slider 70s infinite;
+}
+@-webkit-keyframes auto-slider {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-100%);
+  }
+  20% {
+    transform: translateX(-200%);
+  }
+  30% {
+    transform: translateX(-300%);
+  }
+  40% {
+    transform: translatXe(-400%);
+  }
+  50% {
+    transform: translateX(-500%);
+  }
+  60% {
+    transform: translateX(-600%);
+  }
+  70% {
+    transform: translateX(-700%);
+  }
+  80% {
+    transform: translateX(-800%);
+  }
+  90% {
+    transform: translateX(-900%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.popular {
+  padding-left: 85px;
+  margin-bottom: 20px;
+}
+.genre {
+  display: flex;
+}
+.genre p {
+  margin: 5px 10px 5px 0;
+}
+.anime-description {
+  margin-top: 10px;
+  font-size: 13px;
+}
+.slider-text a {
+  text-decoration: none;
+  color: white;
+}
+.menu {
+  width: 20vw;
+  background-color: #292c42;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  height: 100vh;
+  padding: 90px 0 20px 20px;
+  transition: 500ms ease-in-out;
+}
 .menu.visible {
-            display: none;
+  display: none;
+}
+.menu a {
+  text-align: left;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+.menu ul li a p {
+  margin: 10px 0;
+  padding: 5px 9px;
+}
+.menu ul li a p:hover {
+  background-color: blue;
+}
+.menu ul li {
+  list-style: none;
+}
+.drop_page {
+  background-color: blue;
+}
+.view{
+    position: fixed;
+    bottom: 20px;
+    right: 90%;
+    background-color: white;
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.view i{
+    font-size: 30px;
+    color: black;
+    color: blue;
+    cursor: pointer;
+    border-radius: 30px;
+    &:hover{
+      background-color: rgb(69, 69, 69);
+      transition: 500ms ease;
     }
-.menu a{
-        text-align: left;
-        text-decoration: none;
-        color: white;
-        font-size: 18px;
-    }
-    .menu ul li a p{
-        margin: 10px 0;
-        padding: 5px 9px;
-    }
-    .menu ul li a p:hover{
-        background-color: blue;
-    }
-    .menu ul li{
-        list-style: none;
-    }
-    .drop_page{
-            background-color: blue;
-        }
+}
+.view input[type = "radio"]{
+    display: none;
+}
+/* Below this line is the mobile responsivity code for the header, slider and menu sections */
 
-/* Below this line is the mobile responsivity code */
-
-@media (max-width:1260px){
-.slider-img{
+@media (max-width: 1260px) {
+  .slider-img {
     height: 200px;
     width: 250px;
+  }
 }
-}
-@media (max-width:1215px){
-.slider-img{
+@media (max-width: 1215px) {
+  .slider-img {
     height: 190px;
     width: 230px;
-}
-.anime-description{
+  }
+  .anime-description {
     font-size: 11px;
+  }
 }
-}
-@media (max-width:1040px){
-.slider-img{
+@media (max-width: 1040px) {
+  .slider-img {
     height: 170px;
     width: 210px;
-}
-.anime-description{
+  }
+  .anime-description {
     font-size: 10px;
+  }
 }
+@media (max-width:1024px){
+  .view i{
+    font-size: 25px;
+  }
 }
-@media (max-width:948px){
-.anime-description br{
-        display: none;
-}
-.nav_logo{
-        width: 200px;
-        height: 80px;
-        margin-left: -50px;
-}
-.slider-img{
-    height: 150px;
-    width: 190px;
-}
-.anime-description{
-    font-size: 10px;
-}
-.slider-text a h1{
-    font-size: 20px;
-}
-.genre p{
-font-size: 12px;
-}
-}
-@media (max-width:856px){
-.menu ul li a p{
-        font-size: 15px;
-}
-.slider-img{
-    width: 160px;
-}
-}
-@media (max-width:855px){
-.slide-description{
+@media (max-width: 948px) {
+  .slide-description {
     flex-direction: column;
-}
-.slider-img{
+  }
+  .anime-description br {
+    display: none;
+  }
+  .nav_logo {
+    width: 200px;
+    height: 80px;
+    margin-left: -50px;
+  }
+  .slider-img {
     width: 500px;
     height: 230px;
     margin-bottom: 10px;
+  }
+  .anime-description{
+    width: 500px;
+    font-size: 10px;
+  }
+  .slider-text a h1 {
+    font-size: 20px;
+  }
+  .genre p {
+    font-size: 12px;
+  }
 }
-.head-content{
+@media (max-width: 856px) {
+  .menu ul li a p {
+    font-size: 15px;
+  }
+  .view{
+    bottom: 15px;
+  }
+}
+@media (max-width: 855px) {
+  .head-content {
     margin-top: 10px;
-}
-.popular{
+  }
+  .popular {
     margin-bottom: -10px;
     font-size: 20px;
+  }
 }
-}
-@media (max-width:734px){
-.nav_visible input{
-padding: 2px 8px;
-}
-.user-section a i{
+@media (max-width: 734px) {
+  .nav_visible input {
+    padding: 2px 8px;
+  }
+  .user-section a i {
     font-size: 25px;
-}
-.navbar_toggle{
+  }
+  .navbar_toggle {
     font-size: 25px;
-}
-.menu ul li a p{
+  }
+  .menu ul li a p {
     font-size: 12px;
+  }
+  .view{
+    right: 85%;
+  }
 }
-}
-@media (max-width:647px){
-.slider-img{
-        width: 430px;
-}
-.slider-text{
+@media (max-width: 647px) {
+  .slider-img {
+    width: 430px;
+  }
+  .slider-text {
     padding: 0 30px;
+  }
+  .anime-description {
+    width: 400px;
+  }
 }
-.anime-description{
-    font-size: 9px;
-}
-}
-@media (max-width:573px){
-.slider-img{
+@media (max-width: 573px) {
+  .slider-img {
     width: 380px;
-}
-.slider-text{
+  }
+  .slider-text {
     transform: scale(0.9);
-}
-.genre{
+  }
+  .genre {
     transform: scale(0.9);
     margin-left: -20px;
-}
-.genre p{
+  }
+  .genre p {
     font-size: 11px;
+  }
 }
-}
-@media (max-width:520px){
-.nav_logo{
-        width: 150px;
-}
-.nav_visible input{
+@media (max-width: 520px) {
+  .nav_logo {
+    width: 150px;
+  }
+  .nav_visible input {
     padding: 2px 1px;
-}
-.slider-img{
+  }
+  .slider-img {
     width: 350px;
-}
-.menu ul li a p{
+  }
+  .menu ul li a p {
     font-size: 10px;
-}
-#sign-in{
+  }
+  #sign-in {
     transform: scale(0.9);
     top: 10%;
+  }
 }
-}
-@media (max-width:470px){
-.user-section a i{
+@media(max-width:492px){
+  .view{
+    right: 80%;
+    width: 50px;
+  }
+  .view i{
     font-size: 20px;
+  }
 }
-.navbar_toggle{
+@media (max-width: 470px) {
+  .anime-description{
+    width: 350px;
+    height: 100px;
+    overflow-y:scroll;
+  }
+  .user-section a i {
     font-size: 20px;
-}
-.slider-img{
-        width: 300px;
-}
-.menu{
-    padding:90px 0 20px 9px ;
-}
-.popular{
+  }
+  .navbar_toggle {
+    font-size: 20px;
+  }
+  .slider-img {
+    width: 300px;
+  }
+  .menu {
+    padding: 90px 0 20px 9px;
+  }
+  .popular {
     padding-left: 50px;
+  }
 }
-}
-@media (max-width:440px){
-.container{
+@media (max-width: 440px) {
+  .container {
     width: 75vw;
-}
-.menu{
+  }
+  .menu {
     width: 25vw;
+  }
 }
-}
-@media (max-width:425px){
-#sign-in{
-        transform: scale(0.8);
-        top: 10%;
-        right: 5%;
-}
-#close-modal{
+@media (max-width: 425px) {
+  #sign-in {
+    transform: scale(0.8);
+    top: 10%;
+    right: 5%;
+  }
+  #close-modal {
     transform: scale(0.7);
+  }
 }
+@media (max-width: 404px) {
+  .slider-img {
+    width: 250px;
+  }
+  .anime-description{
+    width: 300px;
+  }
 }
-@media (max-width:404px){
-    .slider-img{
-        width: 250px;
-    }
-}
-@media (max-width:384px){
-.nav_logo{
-       margin-left: -20px;
-}
-.nav_visible input{
+@media (max-width: 384px) {
+  .nav_logo {
+    margin-left: -20px;
+  }
+  .nav_visible input {
     transform: scale(0.6);
+  }
 }
-}
-@media (max-width:358px){
-.nav_logo{
+@media (max-width: 358px) {
+  .nav_logo {
     margin-left: 8px;
     z-index: 100;
-}
-.slider-img{
-        width: 230px;
-        height: 180px;
-}
-.menu{
-        padding:90px 0 20px 4px;
-}
-.menu ul li a p{
+  }
+  .slider-img {
+    width: 230px;
+    height: 180px;
+  }
+  .menu {
+    padding: 90px 0 20px 4px;
+  }
+  .menu ul li a p {
     padding: 5px 5px;
-}
+  }
 }
